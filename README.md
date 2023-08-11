@@ -4,11 +4,12 @@
 
 You can open this sample in the Dev Environments feature of Docker Desktop version 4.12 or later.
 
-[Open in Docker Dev Environments <img src="../open_in_new.svg" alt="Open in Docker Dev Environments" align="top"/>](https://open.docker.com/dashboard/dev-envs?url=https://github.com/docker/awesome-compose/tree/master/react-java-mysql)
+[Open in Docker Dev Environments](https://open.docker.com/dashboard/dev-envs?url=https://github.com/ooMia/dockerComponent/tree/main/)
 
 ### React application with a Spring backend and a MySQL database
 
 Project structure:
+
 ```
 .
 ├── backend
@@ -24,6 +25,7 @@ Project structure:
 ```
 
 [_compose.yaml_](compose.yaml)
+
 ```
 services:
   backend:
@@ -41,6 +43,7 @@ services:
     - 3000:3000
     ...
 ```
+
 The compose file defines an application with three services `frontend`, `backend` and `db`.
 When deploying the application, docker compose maps port 3000 of the frontend service container to port 3000 of the host as specified in the file.
 Make sure port 3000 on the host is not already being in use.
@@ -68,6 +71,7 @@ Creating react-java-mysql-backend-1  ... done
 ## Expected result
 
 Listing containers must show three containers running and the port mapping as below:
+
 ```
 $ docker ps
 ONTAINER ID        IMAGE                       COMMAND                  CREATED             STATUS              PORTS                  NAMES
@@ -80,6 +84,7 @@ After the application starts, navigate to `http://localhost:3000` in your web br
 ![page](./output.jpg)
 
 Stop and remove the containers
+
 ```
 $ docker compose down
 Stopping react-java-mysql-backend-1  ... done
